@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+    <script>
+        var celc = +prompt("Введите температуру в градусах по Цельсию.");
+        var far;
+        while (true) {
+            if (isNaN(celc)) {
+                celc = +prompt("Введите температуру в градусах по Цельсию.");
+
+            } else {
+                far = (9 / 5) * celc + 32;
+                break;
+            }
+
+        }
+        alert("Температура в градусах по Фаренгейту: " + parseInt(far));
+
+        var a = 100;
+        var b = 6;
+        alert("Переменная a = " + a);
+        alert("Переменная b = " + b);
+        alert("Обмениваем....");
+        a = a + b;
+        b = a - b;
+        a = a - b;
+        alert("Переменная a = " + a);
+        alert("Переменная b = " + b);
+        var name, admin;
+        name = "Василий";
+        admin = name;
+        alert(admin);
+        alert("В JS 1000+\"108\" будет равно 1000108");
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
