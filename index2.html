@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+    <script>
+        /******* Задание 1
+        var a = 1, b = 1, c, d;
+        c = ++a; alert(c);           // 2 Префиксный инкремент возращает новое значение(после увелечения на 1)
+        d = b++; alert(d);           // 1 Постфиксный инкремент возращает старое значение(до увелечения на 1)
+        c = (2+ ++a); alert(c);      // 5 До этого мы увеличили а на 1, теперь сначала увеличиваем его еще на 1, потом прибавляем 2
+        d = (2+ b++); alert(d);      // 4 До этого мы увеличили b на 1, теперь сначала прибавляем к нему 2, присваеваем это d, а потом увеличиваем b еще на 1
+        alert(a);                    // 3 а было увеличено на 1 два раза
+        alert(b);                    // 3 b было увеличено на 1 два раза
+        
+        
+        ******* Задание 2
+        Ответ: 5
+        a*=2 (То же что и) a = a*2
+        */
+        function Zad4(a) {
+            if (a == 16) {
+                return;
+            }
+            alert(a);
+            Zad4(a + 1);
+        }
+        function Plus(a, b) {
+            return a + b;
+        }
+        function Minus(a, b) {
+            return a - b;
+        }
+        function Umno(a, b) {
+            return a * b;
+        }
+        function Del(a, b) {
+            return a / b;
+        }
+        function MathO(a, b, c) {
+            switch (c) {
+                case "Сложение":
+                    return Plus(a, b);
+                case "Вычитание":
+                    return Minus(a, b);
+                case "Умножение":
+                    return Umno(a, b);
+                case "Деление":
+                    return Del(a, b);
+                default:
+                    alert("Все пошло не так!");
+
+            }
+        }
+        function Power(val, pow) {
+            if (pow == 0) return 1;
+            if (pow == 1) return val;
+            return val * Power(val, pow - 1);
+        }
+
+
+        alert("Задание 3");
+        var a = +prompt("Введите первое число");
+        var b = +prompt("Введите второе число");
+        var res;
+        if ((a >= 0) && (b >= 0)) {
+            res = a - b;
+            alert("Ответ: " + res);
+        } else if ((a < 0) && (b < 0)) {
+            res = a * b;
+            alert("Ответ: " + res);
+        } else {
+            res = a + b;
+            alert("Ответ: " + res);
+        }
+        alert("Задание 4");
+
+
+        var c = Math.round(Math.random() * 15);
+        switch (c) {
+            case 0:
+                alert(0);
+            case 1:
+                alert(1);
+            case 2:
+                alert(2);
+            case 3:
+                alert(3);
+            case 4:
+                alert(4);
+            case 5:
+                alert(5);
+            case 6:
+                alert(6);
+            case 7:
+                alert(7);
+            case 8:
+                alert(8);
+            case 9:
+                alert(9);
+            case 10:
+                alert(10);
+            case 11:
+                alert(11);
+            case 12:
+                alert(12);
+            case 13:
+                alert(13);
+            case 14:
+                alert(14);
+            case 15:
+                alert(15);
+                break;
+            default:
+                alert("Ошибка");
+        }
+
+        alert("Теперь рекурсия");
+        var c = Math.round(Math.random() * 15);
+        Zad4(c);
+
+        alert("Задание 5");
+        var d = +prompt("Введите первое число");
+        var g = +prompt("Введите второе число");
+        alert("Сложение " + Plus(d, g));
+        alert("Вычитание " + Minus(d, g));
+        alert("Умножение " + Umno(d, g));
+        alert("Деление " + Del(d, g));
+
+        alert("Задание 6");
+        d = +prompt("Введите первое число");
+        g = +prompt("Введите второе число");
+        o = prompt("Введите операцию  (Сложение,Вычитание,Умножение,Деление)");
+        alert("Ответ:" + MathO(d, g, o));
+
+        alert("Задание 8");
+        d = +prompt("Введите число");
+        g = +prompt("Введите степень");
+        alert(Power(d, g));
+        
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
