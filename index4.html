@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function Obj(ed, des, sot) {
+        this.ed = ed;
+        this.des = des;
+        this.sot = sot;
+        this.show = function () {
+            alert("единицы: " + this.ed + " десятки: " + this.des + " сотни: " + this.sot);
+        }
+    }
+    function chudo(a) {
+        if (a < 0 || a > 999) {
+            alert("Ошибка ввода данных!");
+            return new Obj(null, null, null);
+        }
+        var ed = a % 10;
+        var des = Math.trunc(a / 10) % 10;
+        var sot =Math.trunc(a / 100);
+        return new Obj(ed, des, sot);
+
+
+    }
+    var a = +prompt("Введите число от 0 до 999");
+    chudo(a).show();
+</script>
+
+<body>
+
+</body>
+
+</html>
