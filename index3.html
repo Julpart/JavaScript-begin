@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+    function Sum(arr) {
+        var s = 0;
+        for (var item of arr) {
+            s = s + item.price * item.count;
+            console.log(item.title + " стоит " + item.price * item.count);
+        }
+        alert("Общая стоимость товаров = " + s);
+
+    }
+    alert("Задание 1");
+
+    var i = 3;
+    var n;
+    var c = 1;
+    console.log(2);
+    while (i <= 100) {
+        n = 2;
+        while (n <= Math.round(i / 2)) {
+            c = c * i % n;
+            n++;
+        }
+        if (c != 0) {
+            console.log(i);
+        }
+        c = 1;
+        i++;
+
+    }
+    alert("Задание 2");
+    var goods = [
+        {
+            title: "Товар №1",
+            price: 100,
+            count: 2
+        },
+        {
+            title: "Товар №2",
+            price: 200,
+            count: 1
+        },
+        {
+            title: "Товар №3",
+            price: 300,
+            count: 3
+        }
+
+    ];
+    Sum(goods);
+</script>
+
+<body>
+
+</body>
+
+</html>
